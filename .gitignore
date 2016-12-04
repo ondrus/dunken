@@ -8,3 +8,5 @@
 *.log
 *.aux
 *.fdb_latexmk
+
+node_modules/
