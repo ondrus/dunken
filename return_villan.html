@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lämna tillbaka villan</title>
+        <!-- Scripts -->
+        <script src="pickUpReturn.js"></script>
+        <!-- Styles -->
+        <link rel='stylesheet' href='style.css' />
+        <link rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.min.css' />
+    </head>
+    <body>
+        <h2>Lämna tillbaka Villankortet</h2>
+        <textarea placeholder="Skador?" id="villan_damages"rows="2" cols="40"></textarea> <br>
+        <input type="checkbox" id="villan_checklist1" name="checklist1"> Städat det här? <br>
+        <input type="checkbox" id="villan_checklist2" name="checklist2"> Städat det där? <br>
+        <input type="checkbox" id="villan_card" name="card"> Lämnat in kortet <br>
+        <input type="submit" onclick="returnVillan()" value="Submit">
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lämna tillbaka bilen</title>
+        <!-- Scripts -->
+        <script src="pickUpReturn.js"></script>
+        <!-- Styles -->
+        <link rel='stylesheet' href='style.css' />
+        <link rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.min.css' />
+    </head>
+    <body>
+        <h2>Lämna tillbaka Morgan</h2>
+        <textarea placeholder="Skador?" id="car_damages" rows="2" cols="40"></textarea> <br>
+        <input type="checkbox" id="car_keys" name="keys"> Lämnat in nycklar <br>
+        <input type="checkbox" id="car_card" name="card"> Lämnat in kortet <br>
+        <input type="submit" onclick="returnCar()" value="Submit">
+    </body>
+</html>

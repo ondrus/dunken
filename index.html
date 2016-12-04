@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Bokning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bokningssystem</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron vertical-center">
+      <div class="container text-center">
+        <div class="col-md-4">
+          <h2>Villan</h2>
+          <p>
+            <a class="btn btn-success btn-xs" href="#modal-1" data-toggle="modal" role="button">Boka</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Hämta ut</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Återlämna</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Ändra befintlig bokning</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Morgan</h2>
+          <p>
+            <a class="btn btn-success btn-xs" href="#" role="button">Boka</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Hämta ut</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Återlämna</a>
+            <a class="btn btn-success btn-xs" href="#" role="button">Ändra befintlig bokning</a>
+        </p>
+      </div>
+    </div>
+
+      <footer>
+        <p>&copy; 2016 terrorulf, Fistis, XC, OG</p>
+      </footer>
+    </div>
+
+    <div id="modal-1" class ="modal fade" role="dialog">
+      <div class ="modal-dialog">
+        <div class ="modal-content">
+          <div class ="modal-header">
+            <p>Vem är det som bokar?</p>
+          </div>
+          <div class ="modal-body">
+            <form class ="form-horizontal" role="form">
+              <div class ="form-group">
+                <label class="col-sm-2 control-label"
+                 for="inputName">Namn</label>
+                 <div class="col-sm-10">
+                  <input type="name" class="form-control" id="inputName" placeholder="Namn"/>
+                 </div>
+                 <label class="col-sm-2 control-label"
+                 for="inputEmail">Email</label>
+                 <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email"/>
+                 </div>
+                 <div class="col-sm-10">
+                   <label class="col-sm-2 control-label"
+                    for="inputTel">Telefon</label>
+                    <div class="col-sm-10">
+                      <input type="telefon" class="form-control" id="inputTel" placeholder="07X-XXX XX XX"/>
+                    </div>
+               </div>
+                 <label class="col-sm-2 control-label"
+                  for="inputBooker">Bokare</label>
+                 <select name="booker">
+                   <option value="styret">Styret</option>
+                   <option value="kotterier">Kotteri</option>
+                   <option value="onlyCS">Arrangemang med C.S.-medlemmar</option>
+                   <option value="notCS">Arrangemang för icke C.S.-medlemmar</option>
+                 </select>
+               </div>
+              </div>
+            </form>
+          </div>
+          <div class ="modal-footer">
+            <a class ="btn btn-default" data-dismiss ="modal">Ok</a>
+            <a class ="btn btn-primary" data-dismiss ="modal">Close</a>
+          </div>
+      </div>
+    </div>
+  </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
