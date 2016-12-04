@@ -22,6 +22,9 @@ $(document).ready(function(){
   });*/
 
   $('.btn').click(function () {
+    if(this.getAttribute('id')=="home"){
+      document.getElementById("content").innerHTML='<object type="text/html" data="index.html" ></object>';
+    }
     if(this.getAttribute('id')=="btnCalendar"){
       $('#content-mid').load('calendar.html');
     }
