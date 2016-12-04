@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.min.css' />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<!--<script src='app.js'></script>-->
+		<link rel="stylesheet" type="text/css" href="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.css">
+		<script type="text/javascript" src="clockpicker-gh-pages/dist/bootstrap-clockpicker.min.js"></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="container">
+			<h4>Bokning: YYYY-MM-DD HH:MM-HH:MM</h4>
+			<form role="form">
+				<div class="row">
+				  <div class="form-group col-md-5">
+				    <label for="inputName" class="col-sm-2 control-label">Namn</label>
+				    <input type="text" class="form-control" id="inputName" placeholder="Förnamn Efternamn">
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="form-group col-md-5">
+				    <label for="inputNick" class="col-sm-2 control-label">Nick</label>
+				    <input type="text" class="form-control" id="inputNick" placeholder="Smeknamn">
+				  </div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-5">
+				    <label for="inputPhoneNbr" class="col-sm-2 control-label">Telefonnummer</label>
+				    <input type="text" class="form-control" id="inputPhoneNbr" placeholder="07X-XXX XX XX">
+				  </div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-5">
+				    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+				    <input type="email" class="form-control" id="inputEmail" placeholder="blabla@adrian.sen">
+				  </div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-5">
+				    <label for="inputReason" class="col-sm-2 control-label">Bokningsanledning</label>
+				    <textarea class="form-control" rows="3" id="inputReason" placeholder="ex. Handla inför Rymdkotteriets årliga rymdfilmsmaraton"></textarea>
+				  </div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-2">
+						<label for="inputFromTime" class="control-label">From</label>
+						<div class="input-group clockpicker" data-placement="right" data-align="top" data-autoclose="true">
+							<input type="text" class="form-control" id="inputFromTime" value="09:32">
+					    <span class="input-group-addon" id="clockSymbol">
+					        <span class="glyphicon glyphicon-time"></span>
+					    </span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				  <div class="form-group">
+				    <button type="submit" class="btn btn-default">Sign in</button>
+				  </div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+	$('.clockpicker').clockpicker()
+	    .find('input').change(function(){
+	        // TODO: time changed
+	        console.log(this.value);
+	    });
+	$('inputFromTime').clockpicker({
+	    autoclose: true
+	});
+
+	$('clockSymbol').click(function(e){
+	    // Have to stop propagation here
+	    e.stopPropagation();
+	    input.clockpicker('show')
+	            .clockpicker('toggleView', 'hours');
+	});
+	</script>
+</html>
