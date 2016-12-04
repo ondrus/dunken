@@ -5,9 +5,12 @@
 $(document).ready(function(){
 
   var calendar = ""
+  var state = 'car';
 
-  $('.button').click(function () {
+  /*$('.button').click(function () {
     if(this.getAttribute('id')=="day"){
+      console.log("hej")
+      console.log($('#calendar'))
       $('#calendar').fullCalendar('changeView', "agendaDay");
     }
     if(this.getAttribute('id')=="week"){
@@ -16,14 +19,38 @@ $(document).ready(function(){
     if(this.getAttribute('id')=="month"){
       $('#calendar').fullCalendar('changeView', "month");
     }
+  });*/
+
+  $('.btn').click(function () {
+    if(this.getAttribute('id')=="btnCalendar"){
+      $('#content-mid').load('calendar.html');
+    }
+    if(this.getAttribute('id')=="btnBooking"){
+      $('#content-mid').load('morganbookingform.html');
+    }
+    if(this.getAttribute('id')=="btnInfo"){
+      if (state == 'car') {
+        $('#content-mid').load('infoCar.html');
+      } else {
+        $('#content-mid').load('infoHouse.html');
+      }    }
   });
 
 	$('#calendar').fullCalendar({
-    	dayClick: function(date, jsEvent, view) {
-    		//----- OPEN
-    		$(this).on('click', function()  {
+    header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay,listWeek'
+      },
+      dayClick: function(date, jsEvent, view) {
 
-    			setDateFieldData(date);
+         toDay(date);
+
+
+       }
+    	/*	$(this).on('click', function()  {
+          //toDay();
+    		  setDateFieldData(date);
     			//var targeted_popup_class = jQuery(this).attr('data-popup-open');
         		$('[data-popup="' + "popup-1" + '"]').fadeIn(150);
     		});
@@ -33,11 +60,16 @@ $(document).ready(function(){
       		  //var targeted_popup_class = jQuery(this).attr('data-popup-close');
        			$('[data-popup="' + "popup-1" + '"]').fadeOut(150);
 
-    		});
-		}
+    		});*/
+
     });
+
 });
 
+function toDay(date){
+ $('#calendar').fullCalendar('gotoDate',date);
+ $('#calendar').fullCalendar('changeView','agendaDay');
+}
 	//get and display the clicked day
 	function setDateFieldData(date){
     	var dateClicked = String(date.format());
