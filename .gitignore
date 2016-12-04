@@ -1,0 +1,10 @@
+# OS generated files
+*/.DS_Store
+
+# PDFS
+*.pdf
+
+# LaTeX
+*.log
+*.aux
+*.fdb_latexmk
