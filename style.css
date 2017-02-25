@@ -5,41 +5,13 @@
 
 /*style*/
 .calendar-buttons {
-
-	display: inline-block;
-	padding: 4px;
-	-webkit-transform:translate(-50%, -50%);
-    transform:translate(-50%, -50%);
-
 }
 
 .button {
 	display: table-cell;
-	float: left;
-	margin-right: 4px;
-	background-color: #60DBFF;
-	color: #fff;
-	padding: 6px;
-	cursor: pointer;
-	text-align: center;
 }
 
-.button:hover {
-	background-color: #A4EAFF;
-}
-.main-mid{
-	position: fixed;
-	text-align: center;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
-}
 
-/*layout*/
-.calendar-mid{
-	display: inline-block;
-}
 
 
 /* Outer */
